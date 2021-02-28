@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --require dotenv/config src/index.js | pino-pretty "
+    "dev": "nodemon --require dotenv/config src/index.js | pino-pretty",
+    "start": "node --require dotenv/config src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@newrelic/koa": "~5.0.0",
     "koa": "~2.13.1",
     "koa-json-schema": "~3.0.1",
     "koa-mount": "~4.0.0",

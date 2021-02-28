@@ -1,3 +1,4 @@
+import newrelic from '@newrelic/koa';
 import {createServer} from 'http';
 import createApp from './app.js';
 import conf from './conf/index.js';

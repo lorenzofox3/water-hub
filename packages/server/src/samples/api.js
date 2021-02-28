@@ -1,3 +1,4 @@
+import newrelic from 'newrelic';
 import {middleware as validate} from 'koa-json-schema';
 import cache from '../middleware/cache-control.js';
 import {createApp} from '../lib/app.js';
@@ -18,6 +19,10 @@ export default createApp(({router, db}) => {
             coerceTypes: true
         }),
         cache(),
+        async (ctx, next) => {
+            newrelic.addCustomAttribute('month', ctx.query.month);
+            return next();
+        },
         async (ctx) => {
             const {month} = ctx.query;
             ctx.body = await samples.monthlyReport({month});
