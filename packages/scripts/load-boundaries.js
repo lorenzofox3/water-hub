@@ -9,9 +9,7 @@ const options = {
     host: process.env.POSTGRES_HOST || 'localhost',
     port: process.env.POSTGRES_PORT || 5432
 };
-console.log(options);
 const pool = new pg.Pool(options)
-
 
 const path = resolve(process.cwd(), '../../db/data/boundaries.json');
 const boundaries = JSON.parse(readFileSync(path, {encoding:'utf8'}));

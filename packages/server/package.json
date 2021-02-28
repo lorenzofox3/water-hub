@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "koa": "~2.13.1",
+    "koa-cors": "0.0.16",
     "koa-json-schema": "~3.0.1",
     "koa-mount": "~4.0.0",
     "koa-pino-logger": "~3.0.0",

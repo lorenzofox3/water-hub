@@ -4,7 +4,7 @@ export const createService = (opts = {}) => {
     
     return {
         async fetch({month}) {
-            const url = new URL('/temperatures', baseURL);
+            const url = new URL('/api/temperatures', baseURL);
             const searchParams = new URLSearchParams({
                 month
             });
