@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --require dotenv/config src/index.js | pino-pretty "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@newrelic/koa": "~5.0.0",
+    "koa": "~2.13.1",
+    "koa-json-schema": "~3.0.1",
+    "koa-mount": "~4.0.0",
+    "koa-pino-logger": "~3.0.0",
+    "koa-router": "~10.0.0",
+    "newrelic": "~7.1.2",
+    "pg": "~8.5.1",
+    "sql-template-strings": "~2.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "~8.2.0",
+    "nodemon": "~2.0.7",
+    "pino-pretty": "~4.5.0"
+  }
+}
